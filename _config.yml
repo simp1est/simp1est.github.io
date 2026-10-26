@@ -1,0 +1,38 @@
+# Hexo Configuration
+title: Simp1est's Blog
+subtitle: 'Web 安全学习笔记'
+description: '渗透测试 / SRC / 代码审计 / AI 辅助安全'
+keywords: [security, pentest, src]
+author: simp1est
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+url: https://simp1est.github.io
+# 与 hundredsu 博客相同的短链风格：/post/<hash>.html
+permalink: post/:abbrlink.html
+abbrlink:
+  alg: crc16
+  rep: hex
+
+theme: butterfly
+
+# Deployment (GitHub Actions 负责构建，本地无需 deploy)
+deploy:
+  type: ''
+
+# 归档/分页
+archive_generator:
+  per_page: 20
+  yearly: false
+  monthly: false
+  daily: false
+
+# 本地搜索（Butterfly 侧栏搜索用）
+search:
+  path: search.xml
+  field: post
+  content: true
+
+marked:
+  prependRoot: true
+  postAsset: true
