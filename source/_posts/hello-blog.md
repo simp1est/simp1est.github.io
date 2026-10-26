@@ -1,6 +1,6 @@
 ---
 title: 你好，Blog
-description: 你好，Blog。这是我的第一篇文章。
+description:这是我的第一篇文章。
 tags:
   - 随笔
 categories:
@@ -8,8 +8,6 @@ categories:
 abbrlink: '6469'
 date: 2026-10-27 00:08:00
 ---
-
-你好，Blog。
 
 这是我的第一篇文章。
 
