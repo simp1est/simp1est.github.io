@@ -7,6 +7,10 @@ busuanzi:
   site_pv: true   # 全站访问量
   page_pv: true   # 文章阅读量
 
+# 首页文章卡片摘要：1 = 使用 front-matter 的 description 字段（默认 3 = 全文截 500 字，不认 <!-- more -->）
+index_post_content:
+  method: 1
+
 # CDN.option 会在运行时并入 theme.asset（见 scripts/events/cdn.js），覆盖默认的不蒜子脚本地址
 CDN:
   option:
