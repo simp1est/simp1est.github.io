@@ -1,10 +1,11 @@
 ---
 title: 你好，Blog
-date: 2026-10-27 00:08:00
 tags:
   - 随笔
 categories:
   - 站务
+abbrlink: '6469'
+date: 2026-10-27 00:08:00
 ---
 
 你好，Blog。

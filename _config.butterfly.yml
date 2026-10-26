@@ -1,0 +1,18 @@
+# Butterfly 主题覆盖配置（只写与默认不同的项）
+
+# 浏览量统计：Vercount 替换不蒜子（busuanzi.ibruce.info 已失效，导致一直转圈）
+# Vercount 与不蒜子 span 标签（busuanzi_value_*）完全兼容，免注册，国内可直连
+busuanzi:
+  site_uv: true   # 全站访客数
+  site_pv: true   # 全站访问量
+  page_pv: true   # 文章阅读量
+
+# CDN.option 会在运行时并入 theme.asset（见 scripts/events/cdn.js），覆盖默认的不蒜子脚本地址
+CDN:
+  option:
+    busuanzi: https://cn.vercount.one/js
+
+# 侧栏公告
+aside:
+  card_announcement:
+    content: 这是 simp1est 的博客，随缘更新
