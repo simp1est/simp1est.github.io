@@ -1,6 +1,6 @@
 ---
 title: 你好，Blog
-description:这是我的第一篇文章。
+description: "你好，Blog。这是我的第一篇文章。"
 tags:
   - 随笔
 categories:
