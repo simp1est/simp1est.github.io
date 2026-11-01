@@ -1,5 +1,8 @@
 # Butterfly 主题覆盖配置（只写与默认不同的项）
 
+# 首页头图：hero 区背景（source/img/background.jpg，构建后访问 /img/background.jpg）
+index_img: /img/background.jpg
+
 # 浏览量统计：Vercount 替换不蒜子（busuanzi.ibruce.info 已失效，导致一直转圈）
 # Vercount 与不蒜子 span 标签（busuanzi_value_*）完全兼容，免注册，国内可直连
 busuanzi:
