@@ -20,3 +20,7 @@ CDN:
 aside:
   card_announcement:
     content: 这是 simp1est 的博客，随缘更新
+  # 作者卡片 Follow Me 按钮 → GitHub 主页（不写则主题默认跳 github.com/xxxxxx 占位符）
+  card_author:
+    button:
+      link: https://github.com/simp1est
