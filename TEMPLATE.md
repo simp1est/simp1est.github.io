@@ -13,7 +13,13 @@ categories:
      abbrlink 不要写不要删，首次构建自动生成。
      注意：Butterfly 首页卡片摘要取 description 字段，<!-- more --> 在本主题首页不生效。
      易错点：YAML 冒号后必须有一个空格（写成 description:值 会让全站构建缺 index.html、站点 404）；
-     值里有中文标点或冒号时，建议整体加英文双引号。 -->
+     值里有中文标点或冒号时，建议整体加英文双引号。
+
+     ⚠️ 不要给文章设 top_img / cover 字段。
+     本站所有文章页的顶部 banner 走的是"透明底 + 露出全站背景图"的方案
+     （见 source/css/custom.css 第 2 节）。一旦某篇文章写了 top_img，
+     它的 banner 就会变回一张独立大图，和其余文章不一致。
+     想让某篇特殊，改的是 front-matter 里的 top_img，但要清楚会破坏统一风格。 -->
 
 在这里开始写正文。
 

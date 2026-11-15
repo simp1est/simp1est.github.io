@@ -63,3 +63,16 @@ html[data-theme='dark'] {
 html[data-theme='dark'] #footer {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
+
+/* ---------- 4. 文章底部「上一篇 / 下一篇」 ----------
+   主题在 _layout/pagination.styl 给 .pagination-related 设了 background: $dark-black，
+   是一整块纯色深蓝黑，和现在的背景图风格割裂。统一成和 footer 一样的深色玻璃。 */
+.pagination-related {
+  background: rgba(0, 0, 0, 0.35) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+html[data-theme='dark'] .pagination-related {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
