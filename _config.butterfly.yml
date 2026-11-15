@@ -35,6 +35,10 @@ aside:
 
 # 自定义样式注入：source/css/custom.css
 # 用途：卡片 / 顶部 banner / footer 半透明，让 background 背景图能透出来
+#
+# ⚠️ 改完 custom.css 必须同步改下面的 ?v= 版本号
+# 原因：GitHub Pages 对 css 的缓存是 max-age=600，URL 不变的话访客浏览器
+# 会沿用旧样式最多 10 分钟。改了版本号等于换 URL，所有人立即拿到新样式。
 inject:
   head:
-    - '<link rel="stylesheet" href="/css/custom.css">'
+    - '<link rel="stylesheet" href="/css/custom.css?v=20261115-2">'
