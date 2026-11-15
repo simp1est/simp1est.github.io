@@ -1,11 +1,12 @@
 ---
 title: 蓝队技能
 description: 这个人有点懒，什么都没有留下
-date: 2026-11-14 15:20:00
 tags:
   - 蓝队
 categories:
   - 蓝队技能
+abbrlink: db45
+date: 2026-11-14 15:20:00
 ---
 
 ## 前言

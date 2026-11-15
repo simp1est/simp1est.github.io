@@ -1,11 +1,12 @@
 ---
 title: 红队认知
 description: 这个人有点懒，什么都没有留下
-date: 2026-11-02 00:00:00
 tags:
   - 红队
 categories:
   - 红队认知
+abbrlink: 4ca7
+date: 2026-11-02 00:00:00
 ---
 
 ## 前言
