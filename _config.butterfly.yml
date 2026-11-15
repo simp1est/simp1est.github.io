@@ -3,6 +3,11 @@
 # 首页头图：hero 区背景（source/img/background.jpg，构建后访问 /img/background.jpg）
 index_img: /img/background.jpg
 
+# 全站网页背景（#web_bg 层，position:fixed; z-index:-999，background-size:cover 铺满视口）
+# 与 index_img 是两个独立配置：index_img 只管首页顶部 banner，这里是整页背景
+# 注意：文章卡片 .card 默认纯白不透明（--card-bg: $white），背景图只在页面两侧留白与卡片缝隙可见
+background: /img/bg-body.jpg
+
 # 浏览量统计：Vercount 替换不蒜子（busuanzi.ibruce.info 已失效，导致一直转圈）
 # Vercount 与不蒜子 span 标签（busuanzi_value_*）完全兼容，免注册，国内可直连
 busuanzi:
