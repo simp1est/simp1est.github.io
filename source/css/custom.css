@@ -9,14 +9,14 @@
      _global/function.styl  .cardHover { background: var(--card-bg) }
      _layout/aside.styl     .card-widget { @extend .cardHover }
    默认 #FFFFFF（var.styl:46），暗色 #121212（darkmode.styl:17）
-   0.88 = 背景图只隐约透出，正文对比度接近纯白；
+   0.888 = 背景图只隐约透出，正文对比度接近纯白；
    0.80 时背景色晕明显，文字在强对比图（如当前这张亮橙色调）上会发糊 */
 html[data-theme='light'] {
-  --card-bg: rgba(255, 255, 255, 0.88);
+  --card-bg: rgba(255, 255, 255, 0.888);
 }
 
 html[data-theme='dark'] {
-  --card-bg: rgba(18, 18, 18, 0.88);
+  --card-bg: rgba(18, 18, 18, 0.888);
 }
 
 /* 毛玻璃 —— 模糊卡片背后的背景图。
