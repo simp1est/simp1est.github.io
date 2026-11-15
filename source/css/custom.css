@@ -29,23 +29,37 @@ html[data-theme='dark'] {
 }
 
 /* ---------- 2. 顶部 banner ----------
-   刻意【不】给 #page-header 设 opacity。
-   原因：banner 的正下方就是 #web_bg 的全站背景图，一降透明度两张图就叠影，
-   实测背景图底部的字幕会直接浮到 banner 的标题上，画面很脏。
-   如果仍想要"更通透"的 banner，动的应该是遮罩层而不是透明度：
-     #page-header:not(.not-top-img):before { background-color: rgba(255,255,255,.2); }
-*/
+   目标：文章页 / 归档页的 banner 与正文背景保持一致，不要那块突兀的主题蓝。
+
+   机制：index_img 只作用于首页，其他页面读 default_top_img；当前 default_top_img
+   为空，所以 #page-header 只剩 background-color: $light-blue 一层纯色。
+   这里把底色置空，让下方的 #web_bg 全站背景图透上来。
+
+   注意：不能同时给 #page-header 设 opacity —— 那会让 banner 和背景图叠影
+   （实测背景图字幕会浮到标题上）。底色置空只影响"没有图片的 banner"；
+   首页有 index_img 的 banner 图片本身不透明，不受影响。 */
+#page-header {
+  background-color: transparent !important;
+}
+
+/* banner 的黑色遮罩稍微加深一点，保证白色标题压在复杂背景图上仍然可读 */
+#page-header:not(.not-top-img):before {
+  background-color: rgba(0, 0, 0, 0.38) !important;
+}
 
 /* ---------- 3. 底部 footer ----------
    主题默认 background-color: $theme-color = #49B1F5，且当前 footer_img: false，
-   所以 footer 是一块不透明纯色，只能单独覆盖 */
+   所以 footer 原本是一整块不透明蓝色，和主体背景割裂。
+
+   改成深色半透明 + 毛玻璃：既不用那块蓝，又能压暗背景图保证底部浅灰文字可读
+   （footer 文字色是 --light-grey #EEEEEE，压在亮背景上会糊）。 */
 #footer {
-  background-color: rgba(73, 177, 245, 0.55) !important;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.35) !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
-/* 暗色模式：深色半透明，避免亮蓝底与暗色正文割裂 */
+/* 暗色模式下底色再深一档 */
 html[data-theme='dark'] #footer {
-  background-color: rgba(18, 18, 18, 0.55) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
