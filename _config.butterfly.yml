@@ -32,3 +32,9 @@ aside:
   card_author:
     button:
       link: https://github.com/simp1est
+
+# 自定义样式注入：source/css/custom.css
+# 用途：卡片 / 顶部 banner / footer 半透明，让 background 背景图能透出来
+inject:
+  head:
+    - '<link rel="stylesheet" href="/css/custom.css">'

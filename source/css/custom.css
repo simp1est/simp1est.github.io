@@ -1,0 +1,39 @@
+/* ==========================================================================
+   自定义样式 —— 全局半透明层
+   目的：让 #web_bg 的全站背景图（/img/bg-body.jpg）能透过卡片、banner、footer
+   位置：source/css/custom.css，经 _config.butterfly.yml 的 inject.head 注入
+   ========================================================================== */
+
+/* ---------- 1. 文章卡片 + 侧栏卡片 ----------
+   主题里 .card 和 .card-widget 共用 --card-bg：
+     source/css/_global/function.styl  .cardHover { background: var(--card-bg) }
+     source/css/_layout/aside.styl    .card-widget { @extend .cardHover }
+   默认值 #[FFFFFF]（var.styl:46），暗色模式为 #121212（darkmode.styl:17）
+   这里改成同色半透明，背景图即可透出 */
+html[data-theme='light'] {
+  --card-bg: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme='dark'] {
+  --card-bg: rgba(18, 18, 18, 0.72);
+}
+
+/* ---------- 2. 顶部 banner ----------
+   #page-header 内部含 #nav 与站点标题，opacity 会一并作用于它们
+   0.8 = 明显透出下层背景，同时白色标题（带 text-shadow）仍可读
+   注意：滚动后固定导航栏也会跟着半透明，这属于同一属性的副作用 */
+#page-header {
+  opacity: 0.8;
+}
+
+/* ---------- 3. 底部 footer ----------
+   主题默认 background-color: $theme-color = #49B1F5，且当前 footer_img: false
+   所以 footer 是一块不透明纯色，需要单独改 */
+#footer {
+  background-color: rgba(73, 177, 245, 0.6) !important;
+}
+
+/* 暗色模式下换成深色半透明，避免亮蓝底与暗色正文割裂 */
+html[data-theme='dark'] #footer {
+  background-color: rgba(18, 18, 18, 0.6) !important;
+}
