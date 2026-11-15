@@ -73,6 +73,15 @@ html[data-theme='dark'] #footer {
   backdrop-filter: blur(12px);
 }
 
+/* 关键：没有设置封面图的文章，模板会渲染一个占位块
+     .cover(style="background: var(--default-bg-color)")
+   而 --default-bg-color 就是主题蓝 #49b1f5，它 width/height 100% 铺满整个导航块，
+   会把上面设的玻璃底整块盖掉（现象：那块显示成浅蓝色而不是深色）。
+   这里把占位层的背景清空，玻璃底才能透出来。 */
+.pagination-related .cover {
+  background: transparent !important;
+}
+
 html[data-theme='dark'] .pagination-related {
   background: rgba(0, 0, 0, 0.5) !important;
 }
